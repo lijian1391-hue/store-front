@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import { listRegions } from "@lib/data/regions";
 import { getRegionParams } from "@lib/params/region-params";
 import type { RegionCountry } from "@modules/checkout/components/AddressFields";
-import { CheckoutPage } from "@modules/checkout/components/CheckoutPage";
+import { ExpressCheckoutPage } from "@modules/checkout/components/express/ExpressCheckoutPage";
 
 export const getStaticPaths = getRegionParams;
 
@@ -43,5 +43,5 @@ try {
 ---
 
 <Layout title="Checkout" description="Complete your purchase." noindex>
-  <CheckoutPage client:load countryCode={countryCode} countries={countries} />
+  <ExpressCheckoutPage client:load countryCode={countryCode} countries={countries} />
 </Layout>

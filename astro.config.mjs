@@ -3,7 +3,6 @@ import { loadEnv } from "vite";
 
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
-import tailwindcss from "@tailwindcss/vite";
 
 const { PUBLIC_MEDUSA_BACKEND_URL, S3_DOMAIN } = loadEnv(
   process.env.NODE_ENV ?? "",
@@ -29,7 +28,6 @@ export default defineConfig({
     resolve: {
       dedupe: ["react", "react-dom"],
     },
-    plugins: [tailwindcss()],
   },
   image: {
     domains: [
