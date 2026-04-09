@@ -1,0 +1,372 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { getRegionParams } from "@lib/params/region-params";
+
+export const getStaticPaths = getRegionParams;
+
+const { countryCode } = Astro.params;
+
+if (!countryCode) {
+  return Astro.redirect("/not-found");
+}
+---
+
+<Layout title="Premium Wireless Earbuds - Nigeria" description="High-quality wireless earbuds with fast charging, long battery life, and Nigerian support. Pay on delivery available.">
+  <main class="jumia-max-w-7xl jumia-mx-auto jumia-px-4">
+    
+    {/* Hero Section */}
+    <section class="jumia-relative jumia-w-full jumia-min-h-screen jumia-flex jumia-items-center jumia-justify-center jumia-bg-cover jumia-bg-center jumia-bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1920&h=1080&fit=crop');">
+      <div class="jumia-absolute jumia-inset-0 jumia-bg-black jumia-bg-opacity-50"></div>
+      
+      <div class="jumia-relative jumia-z-10 jumia-text-center jumia-px-4 jumia-py-16">
+        <h1 class="jumia-text-3xl jumia-md:text-5xl jumia-font-bold jumia-text-white jumia-mb-6 jumia-leading-tight">
+          Premium Wireless Earbuds
+        </h1>
+        
+        <p class="jumia-text-white jumia-text-lg jumia-md:text-xl jumia-mb-8">
+          Compatible with iPhone, Galaxy, Pixel & All Devices
+        </p>
+        
+        <div class="jumia-flex jumia-flex-col jumia-items-center jumia-mb-8">
+          <div class="jumia-flex jumia-items-center jumia-gap-4 jumia-text-4xl jumia-font-bold jumia-text-white">
+            <span class="jumia-text-orange-500">₦27,900</span>
+            <span class="jumia-text-gray-300 jumia-text-2xl jumia-line-through">₦35,900</span>
+          </div>
+          <p class="jumia-text-orange-400 jumia-text-sm jumia-mt-2">Limited time offer - Save ₦8,000</p>
+        </div>
+        
+        <a
+          href={`/${countryCode}/cart`}
+          class="jumia-inline-block jumia-bg-orange-600 jumia-text-white jumia-text-xl jumia-font-bold jumia-py-4 jumia-px-12 jumia-rounded jumia-hover:bg-orange-700 jumia-transition-all jumia-transform jumia-hover:scale-105 jumia-shadow-lg jumia-w-full jumia-max-w-md"
+        >
+          Order Now - Pay on Delivery
+        </a>
+        
+        <p class="jumia-text-white jumia-text-sm jumia-mt-4">
+          ✅ Free Delivery in Lagos ✅ 1-Year Warranty ✅ 30-Day Return
+        </p>
+      </div>
+    </section>
+    
+    {/* Product Benefits Section */}
+    <section class="jumia-py-16 jumia-bg-white">
+      <div class="jumia-max-w-6xl jumia-mx-auto jumia-px-4">
+        <h2 class="jumia-text-3xl jumia-font-bold jumia-text-center jumia-mb-12 jumia-text-gray-900">
+          Why Choose Our Earbuds?
+        </h2>
+        
+        <div class="jumia-grid jumia-grid-cols-1 jumia-md:grid-cols-2 jumia-lg:grid-cols-3 jumia-gap-8">
+          {/* Fast Charging Feature */}
+          <div class="jumia-text-center jumia-p-6 jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-transition-all jumia-hover:shadow-lg">
+            <div class="jumia-w-16 jumia-h-16 jumia-mx-auto jumia-bg-orange-100 jumia-rounded-full jumia-flex jumia-items-center jumia-justify-center jumia-mb-4">
+              <svg class="jumia-w-8 jumia-h-8 jumia-text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-2">Fast Charging</h3>
+            <p class="jumia-text-gray-600">Get 2 hours of playback with just 10 minutes charge</p>
+          </div>
+          
+          {/* Battery Life Feature */}
+          <div class="jumia-text-center jumia-p-6 jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-transition-all jumia-hover:shadow-lg">
+            <div class="jumia-w-16 jumia-h-16 jumia-mx-auto jumia-bg-orange-100 jumia-rounded-full jumia-flex jumia-items-center jumia-justify-center jumia-mb-4">
+              <svg class="jumia-w-8 jumia-h-8 jumia-text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18v-6m0 0V6m0 6h6m-6 0H6"></path>
+              </svg>
+            </div>
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-2">40 Hours Battery</h3>
+            <p class="jumia-text-gray-600">Extended playtime with convenient charging case</p>
+          </div>
+          
+          {/* Noise Cancellation Feature */}
+          <div class="jumia-text-center jumia-p-6 jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-transition-all jumia-hover:shadow-lg">
+            <div class="jumia-w-16 jumia-h-16 jumia-mx-auto jumia-bg-orange-100 jumia-rounded-full jumia-flex jumia-items-center jumia-justify-center jumia-mb-4">
+              <svg class="jumia-w-8 jumia-h-8 jumia-text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+              </svg>
+            </div>
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-2">Noise Cancellation</h3>
+            <p class="jumia-text-gray-600">Clear audio with active noise cancellation</p>
+          </div>
+          
+          {/* Water Resistant Feature */}
+          <div class="jumia-text-center jumia-p-6 jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-transition-all jumia-hover:shadow-lg">
+            <div class="jumia-w-16 jumia-h-16 jumia-mx-auto jumia-bg-orange-100 jumia-rounded-full jumia-flex jumia-items-center jumia-justify-center jumia-mb-4">
+              <svg class="jumia-w-8 jumia-h-8 jumia-text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-2">IPX5 Water Resistant</h3>
+            <p class="jumia-text-gray-600">Sweat and rain resistant for all activities</p>
+          </div>
+          
+          {/* Bluetooth Feature */}
+          <div class="jumia-text-center jumia-p-6 jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-transition-all jumia-hover:shadow-lg">
+            <div class="jumia-w-16 jumia-h-16 jumia-mx-auto jumia-bg-orange-100 jumia-rounded-full jumia-flex jumia-items-center jumia-justify-center jumia-mb-4">
+              <svg class="jumia-w-8 jumia-h-8 jumia-text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+              </svg>
+            </div>
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-2">Bluetooth 5.0</h3>
+            <p class="jumia-text-gray-600">Stable connection with all your devices</p>
+          </div>
+          
+          {/* Dual Connection Feature */}
+          <div class="jumia-text-center jumia-p-6 jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-transition-all jumia-hover:shadow-lg">
+            <div class="jumia-w-16 jumia-h-16 jumia-mx-auto jumia-bg-orange-100 jumia-rounded-full jumia-flex jumia-items-center jumia-justify-center jumia-mb-4">
+              <svg class="jumia-w-8 jumia-h-8 jumia-text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+              </svg>
+            </div>
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-2">Dual Connection</h3>
+            <p class="jumia-text-gray-600">Connect to two devices simultaneously</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {/* Product Usage Section */}
+    <section class="jumia-py-16 jumia-bg-gray-50">
+      <div class="jumia-max-w-6xl jumia-mx-auto jumia-px-4">
+        <h2 class="jumia-text-3xl jumia-font-bold jumia-text-center jumia-mb-12 jumia-text-gray-900">
+          Perfect for Every Occasion
+        </h2>
+        
+        <div class="jumia-grid jumia-grid-cols-1 jumia-md:grid-cols-2 jumia-gap-8">
+          <div class="jumia-relative jumia-overflow-hidden jumia-rounded-lg jumia-shadow-lg">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop" alt="Working at desk" class="jumia-w-full jumia-h-64 jumia-object-cover jumia-transition-transform jumia-hover:scale-105">
+            <div class="jumia-absolute jumia-bottom-0 jumia-left-0 jumia-right-0 jumia-bg-gradient-to-t jumia-from-black jumia-to-transparent jumia-p-4">
+              <p class="jumia-text-white jumia-font-bold">Work & Productivity</p>
+            </div>
+          </div>
+          
+          <div class="jumia-relative jumia-overflow-hidden jumia-rounded-lg jumia-shadow-lg">
+            <img src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?w=800&h=600&fit=crop" alt="Person running" class="jumia-w-full jumia-h-64 jumia-object-cover jumia-transition-transform jumia-hover:scale-105">
+            <div class="jumia-absolute jumia-bottom-0 jumia-left-0 jumia-right-0 jumia-bg-gradient-to-t jumia-from-black jumia-to-transparent jumia-p-4">
+              <p class="jumia-text-white jumia-font-bold">Fitness & Sports</p>
+            </div>
+          </div>
+          
+          <div class="jumia-relative jumia-overflow-hidden jumia-rounded-lg jumia-shadow-lg">
+            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&h=600&fit=crop" alt="Music concert" class="jumia-w-full jumia-h-64 jumia-object-cover jumia-transition-transform jumia-hover:scale-105">
+            <div class="jumia-absolute jumia-bottom-0 jumia-left-0 jumia-right-0 jumia-bg-gradient-to-t jumia-from-black jumia-to-transparent jumia-p-4">
+              <p class="jumia-text-white jumia-font-bold">Music & Entertainment</p>
+            </div>
+          </div>
+          
+          <div class="jumia-relative jumia-overflow-hidden jumia-rounded-lg jumia-shadow-lg">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d8b5f20035?w=800&h=600&fit=crop" alt="Traveling" class="jumia-w-full jumia-h-64 jumia-object-cover jumia-transition-transform jumia-hover:scale-105">
+            <div class="jumia-absolute jumia-bottom-0 jumia-left-0 jumia-right-0 jumia-bg-gradient-to-t jumia-from-black jumia-to-transparent jumia-p-4">
+              <p class="jumia-text-white jumia-font-bold">On The Go</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {/* Social Proof Section */}
+    <section class="jumia-py-16 jumia-bg-orange-50">
+      <div class="jumia-max-w-6xl jumia-mx-auto jumia-px-4">
+        <h2 class="jumia-text-3xl jumia-font-bold jumia-text-center jumia-mb-12 jumia-text-gray-900">
+          What Our Nigerian Customers Say
+        </h2>
+        
+        <div class="jumia-grid jumia-grid-cols-1 jumia-md:grid-cols-3 jumia-gap-8">
+          {/* Review 1 */}
+          <div class="jumia-bg-white jumia-p-6 jumia-rounded-lg jumia-shadow-md">
+            <div class="jumia-flex jumia-items-center jumia-mb-4">
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <p class="jumia-text-gray-700 jumia-mb-4">"No wahala! The earbuds are amazing. Sound quality is top-notch and battery life is impressive. Pay on delivery worked perfectly."</p>
+            <div class="jumia-flex jumia-items-center">
+              <div class="jumia-w-10 jumia-h-10 jumia-bg-gray-300 jumia-rounded-full jumia-mr-3"></div>
+              <div>
+                <p class="jumia-font-bold jumia-text-gray-900">Chinedu O.</p>
+                <p class="jumia-text-sm jumia-text-gray-600">Lagos</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Review 2 */}
+          <div class="jumia-bg-white jumia-p-6 jumia-rounded-lg jumia-shadow-md">
+            <div class="jumia-flex jumia-items-center jumia-mb-4">
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <p class="jumia-text-gray-700 jumia-mb-4">"Best purchase this year! No stress, just great sound. Delivery was fast and the earbuds work perfectly with my iPhone."</p>
+            <div class="jumia-flex jumia-items-center">
+              <div class="jumia-w-10 jumia-h-10 jumia-bg-gray-300 jumia-rounded-full jumia-mr-3"></div>
+              <div>
+                <p class="jumia-font-bold jumia-text-gray-900">Amina B.</p>
+                <p class="jumia-text-sm jumia-text-gray-600">Abuja</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Review 3 */}
+          <div class="jumia-bg-white jumia-p-6 jumia-rounded-lg jumia-shadow-md">
+            <div class="jumia-flex jumia-items-center jumia-mb-4">
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="jumia-w-5 jumia-h-5 jumia-text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+            <p class="jumia-text-gray-700 jumia-mb-4">"Value for money! Great sound quality and very comfortable. I recommend to all my friends. No problem at all!"</p>
+            <div class="jumia-flex jumia-items-center">
+              <div class="jumia-w-10 jumia-h-10 jumia-bg-gray-300 jumia-rounded-full jumia-mr-3"></div>
+              <div>
+                <p class="jumia-font-bold jumia-text-gray-900">Emeka J.</p>
+                <p class="jumia-text-sm jumia-text-gray-600">Port Harcourt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {/* CTA Repeat Section */}
+    <section class="jumia-py-16 jumia-bg-orange-600 jumia-text-white">
+      <div class="jumia-max-w-4xl jumia-mx-auto jumia-text-center jumia-px-4">
+        <h2 class="jumia-text-3xl jumia-font-bold jumia-mb-6">
+          Don't Miss This Limited Time Offer!
+        </h2>
+        
+        <div class="jumia-flex jumia-flex-col jumia-items-center jumia-mb-8">
+          <div class="jumia-flex jumia-items-center jumia-gap-4 jumia-text-5xl jumia-font-bold">
+            <span class="jumia-text-yellow-300">₦27,900</span>
+            <span class="jumia-text-white jumia-text-3xl jumia-line-through jumia-opacity-75">₦35,900</span>
+          </div>
+          <p class="jumia-text-orange-200 jumia-text-lg jumia-mt-2">Save ₦8,000 - Ends Soon!</p>
+        </div>
+        
+        <a
+          href={`/${countryCode}/cart`}
+          class="jumia-inline-block jumia-bg-white jumia-text-orange-600 jumia-text-2xl jumia-font-bold jumia-py-5 jumia-px-16 jumia-rounded jumia-hover:bg-gray-100 jumia-transition-all jumia-transform jumia-hover:scale-105 jumia-shadow-xl jumia-w-full jumia-max-w-md"
+        >
+          Order Now - Pay on Delivery
+        </a>
+        
+        <p class="jumia-text-orange-100 jumia-text-sm jumia-mt-6">
+          ✅ Free Delivery in Lagos ✅ 1-Year Warranty ✅ 30-Day Money Back Guarantee
+        </p>
+      </div>
+    </section>
+    
+    {/* FAQ Section */}
+    <section class="jumia-py-16 jumia-bg-white">
+      <div class="jumia-max-w-4xl jumia-mx-auto jumia-px-4">
+        <h2 class="jumia-text-3xl jumia-font-bold jumia-text-center jumia-mb-12 jumia-text-gray-900">
+          Frequently Asked Questions
+        </h2>
+        
+        <div class="jumia-space-y-6">
+          {/* FAQ Item 1 */}
+          <div class="jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-p-6">
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-3">
+              📦 What is the delivery time?
+            </h3>
+            <p class="jumia-text-gray-700">
+              Delivery within Lagos takes 1-3 business days. Other locations take 3-7 business days. You'll receive tracking information once your order is shipped.
+            </p>
+          </div>
+          
+          {/* FAQ Item 2 */}
+          <div class="jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-p-6">
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-3">
+              💳 Is cash on delivery available?
+            </h3>
+            <p class="jumia-text-gray-700">
+              Yes! We offer Cash on Delivery (COD) for all locations in Nigeria. No wahala - just pay when your order arrives.
+            </p>
+          </div>
+          
+          {/* FAQ Item 3 */}
+          <div class="jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-p-6">
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-3">
+              📱 Are these earbuds compatible with my phone?
+            </h3>
+            <p class="jumia-text-gray-700">
+              Yes! Our earbuds work with all devices that have Bluetooth - iPhone, Samsung Galaxy, Google Pixel, and all other smartphones and tablets.
+            </p>
+          </div>
+          
+          {/* FAQ Item 4 */}
+          <div class="jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-p-6">
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-3">
+              🔄 What is your return policy?
+            </h3>
+            <p class="jumia-text-gray-700">
+              30-day money back guarantee! If you're not satisfied with your purchase, return it within 30 days for a full refund. No questions asked.
+            </p>
+          </div>
+          
+          {/* FAQ Item 5 */}
+          <div class="jumia-border jumia-border-gray-200 jumia-rounded-lg jumia-p-6">
+            <h3 class="jumia-text-xl jumia-font-bold jumia-text-gray-900 jumia-mb-3">
+              🔋 How long does the battery last?
+            </h3>
+            <p class="jumia-text-gray-700">
+              Up to 8 hours of continuous playback on a single charge. With the charging case, you get up to 40 hours total playtime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {/* Final CTA Section */}
+    <section class="jumia-py-12 jumia-bg-orange-500 jumia-text-white">
+      <div class="jumia-max-w-4xl jumia-mx-auto jumia-text-center jumia-px-4">
+        <h2 class="jumia-text-2xl jumia-font-bold jumia-mb-4">
+          Ready to Upgrade Your Audio Experience?
+        </h2>
+        <p class="jumia-text-orange-100 jumia-mb-6">Join thousands of satisfied Nigerian customers</p>
+        
+        <a
+          href={`/${countryCode}/cart`}
+          class="jumia-inline-block jumia-bg-white jumia-text-orange-600 jumia-text-xl jumia-font-bold jumia-py-4 jumia-px-12 jumia-rounded jumia-hover:bg-gray-100 jumia-transition-all"
+        >
+          Order Now - Pay on Delivery
+        </a>
+      </div>
+    </section>
+    
+  </main>
+</Layout>

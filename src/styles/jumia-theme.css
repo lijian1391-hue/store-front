@@ -1139,3 +1139,342 @@ body {
 .jumia-place-content-even {
   place-content: even;
 }
+
+/* Landing Page Specific Styles */
+.jumia-landing-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jumia-landing-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.jumia-landing-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.jumia-landing-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--jumia-white);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.jumia-landing-hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--jumia-white);
+  margin-bottom: 3rem;
+}
+
+.jumia-landing-price-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.jumia-landing-price {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--jumia-orange);
+}
+
+.jumia-landing-price-old {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: line-through;
+}
+
+.jumia-landing-cta-btn {
+  display: inline-block;
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.5rem 4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.jumia-landing-cta-btn:hover {
+  background-color: var(--jumia-orange-dark);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(245, 124, 0, 0.4);
+}
+
+.jumia-landing-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.jumia-landing-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.jumia-landing-feature-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(245, 124, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.jumia-landing-feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  margin-bottom: 0.5rem;
+}
+
+.jumia-landing-feature-description {
+  font-size: 1rem;
+  color: var(--jumia-gray);
+  line-height: 1.6;
+}
+
+.jumia-landing-usage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+
+.jumia-landing-usage-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.jumia-landing-usage-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jumia-landing-usage-card:hover .jumia-landing-usage-image {
+  transform: scale(1.1);
+}
+
+.jumia-landing-usage-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.jumia-landing-usage-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jumia-white);
+}
+
+.jumia-landing-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.jumia-landing-testimonial-card {
+  background-color: var(--jumia-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.jumia-landing-testimonial-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.jumia-landing-testimonial-text {
+  font-size: 1rem;
+  color: var(--jumia-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.jumia-landing-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.jumia-landing-testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--jumia-gray-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--jumia-gray);
+}
+
+.jumia-landing-testimonial-name {
+  font-weight: 700;
+  color: var(--jumia-black);
+}
+
+.jumia-landing-testimonial-location {
+  font-size: 0.875rem;
+  color: var(--jumia-gray);
+}
+
+.jumia-landing-faq-item {
+  border: 1px solid var(--jumia-gray-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.jumia-landing-faq-question {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  margin-bottom: 0.5rem;
+}
+
+.jumia-landing-faq-answer {
+  font-size: 1rem;
+  color: var(--jumia-gray);
+  line-height: 1.6;
+}
+
+.jumia-landing-faq-answer p {
+  margin-bottom: 0.5rem;
+}
+
+.jumia-landing-final-cta {
+  padding: 6rem 0;
+  background-color: var(--jumia-black);
+  color: var(--jumia-white);
+  text-align: center;
+}
+
+.jumia-landing-final-cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.jumia-landing-final-cta-price {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--jumia-orange);
+  margin-bottom: 2rem;
+}
+
+.jumia-landing-final-cta-old-price {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+}
+
+.jumia-landing-final-cta-btn {
+  display: inline-block;
+  background-color: var(--jumia-white);
+  color: var(--jumia-black);
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.5rem 4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.jumia-landing-final-cta-btn:hover {
+  background-color: var(--jumia-gray-light);
+  transform: scale(1.05);
+}
+
+.jumia-landing-benefits-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.jumia-landing-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jumia-orange);
+}
+
+.jumia-landing-benefit-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.jumia-landing-mobile-first {
+  @media (max-width: 768px) {
+    .jumia-landing-hero-title {
+      font-size: 2rem;
+    }
+    
+    .jumia-landing-hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .jumia-landing-price {
+      font-size: 3rem;
+    }
+    
+    .jumia-landing-price-old {
+      font-size: 2rem;
+    }
+    
+    .jumia-landing-cta-btn {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+    
+    .jumia-landing-final-cta-price {
+      font-size: 4rem;
+    }
+    
+    .jumia-landing-final-cta-btn {
+      font-size: 1.5rem;
+      padding: 1.2rem 3rem;
+    }
+  }
+}
