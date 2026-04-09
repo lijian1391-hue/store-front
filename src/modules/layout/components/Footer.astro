@@ -24,33 +24,29 @@ const companyLinks = [
 ];
 ---
 
-<footer class="border-t border-black/10 bg-stone-50">
-  <div class="px-8 py-14 md:px-12 lg:px-16">
-    <div
-      class="grid gap-10 border-b border-black/10 pb-10 md:grid-cols-2 xl:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]"
-    >
-      <section class="max-w-md">
-        <p
-          class="text-xs font-semibold uppercase tracking-[0.28em] text-black/55"
-        >
+<footer class="jumia-footer">
+  <div class="jumia-container jumia-max-w-7xl jumia-px-4 jumia-mx-auto">
+    <div class="jumia-grid jumia-grid-4 jumia-gap-8 jumia-py-12 jumia-border-b jumia-border-white/10">
+      <section>
+        <p class="jumia-text-xs jumia-font-semibold jumia-uppercase jumia-tracking-[0.28em] jumia-text-gray/55">
           Astro Medusa Starter
         </p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-black">
+        <h2 class="jumia-mt-4 jumia-text-3xl jumia-font-semibold jumia-tracking-tight jumia-text-white">
           A storefront that feels ready to ship.
         </h2>
-        <p class="mt-4 text-sm leading-6 text-black/65">
+        <p class="jumia-mt-4 jumia-text-sm jumia-leading-6 jumia-text-gray/65">
           Built for fast browsing, clean checkout, and a polished shopping flow
           from first click to confirmed order.
         </p>
       </section>
 
       <nav aria-label="Footer shop navigation">
-        <p class="text-sm font-semibold text-black">Shop</p>
-        <ul class="mt-4 space-y-3 text-sm text-black/65">
+        <p class="jumia-text-sm jumia-font-semibold jumia-text-white">Shop</p>
+        <ul class="jumia-mt-4 jumia-space-y-3 jumia-text-sm jumia-text-gray/65">
           {
             shopLinks.map((link) => (
               <li>
-                <a class="transition hover:text-black" href={link.href}>
+                <a class="jumia-transition jumia-hover:text-orange" href={link.href}>
                   {link.label}
                 </a>
               </li>
@@ -60,13 +56,13 @@ const companyLinks = [
       </nav>
 
       <nav aria-label="Footer company navigation">
-        <p class="text-sm font-semibold text-black">Company</p>
-        <ul class="mt-4 space-y-3 text-sm text-black/65">
+        <p class="jumia-text-sm jumia-font-semibold jumia-text-white">Company</p>
+        <ul class="jumia-mt-4 jumia-space-y-3 jumia-text-sm jumia-text-gray/65">
           {
             companyLinks.map((link) => (
               <li>
                 <a
-                  class="transition hover:text-black"
+                  class="jumia-transition jumia-hover:text-orange"
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noreferrer" : undefined}
@@ -80,14 +76,14 @@ const companyLinks = [
       </nav>
 
       <section>
-        <p class="text-sm font-semibold text-black">Customer Care</p>
-        <div class="mt-4 space-y-4 text-sm text-black/65">
+        <p class="jumia-text-sm jumia-font-semibold jumia-text-white">Customer Care</p>
+        <div class="jumia-mt-4 jumia-space-y-4 jumia-text-sm jumia-text-gray/65">
           <p>
             Need help with the starter? Browse the catalog, test the cart, and
             explore the full purchase flow end to end.
           </p>
           <a
-            class="inline-flex rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-black/85"
+            class="jumia-inline-flex jumia-rounded-full jumia-bg-orange jumia-px-5 jumia-py-3 jumia-text-sm jumia-font-medium jumia-text-white jumia-transition jumia-hover:bg-orange-dark"
             href={`/${countryCode}/store`}
           >
             Start shopping
@@ -96,7 +92,7 @@ const companyLinks = [
       </section>
     </div>
 
-    <p class="text-sm text-black/55 pt-6">
+    <p class="jumia-text-sm jumia-text-gray/55 jumia-pt-6 jumia-text-center">
       &copy; {currentYear} Astro Medusa Starter. Built by Michał Bystryk.
     </p>
   </div>

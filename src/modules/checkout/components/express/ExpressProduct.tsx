@@ -77,23 +77,23 @@ export const ExpressProduct = ({ cart, countryCode, isActive }: ExpressProductPr
       isDone={cart.items?.length > 0}
       path={`/${countryCode}/checkout?step=product`}
     >
-      {isLoading && <div className="text-sm text-gray-500">Loading product...</div>}
-      {!isLoading && !product && <div className="text-sm text-gray-500">Product not found</div>}
+      {isLoading && <div className="jumia-text-sm jumia-text-gray">Loading product...</div>}
+      {!isLoading && !product && <div className="jumia-text-sm jumia-text-gray">Product not found</div>}
       {!isLoading && product && (
-        <div className="flex flex-col gap-6">
-          <div className="flex gap-4">
+        <div className="jumia-flex jumia-flex-col jumia-gap-6">
+          <div className="jumia-flex jumia-gap-4">
             <img
               src={product.thumbnail || "/placeholder.png"}
               alt={product.title}
-              className="w-32 h-32 object-cover rounded border border-gray-200"
+              className="jumia-w-32 jumia-h-32 jumia-object-cover jumia-rounded jumia-border jumia-border-gray-200"
             />
-            <div className="flex flex-col gap-2">
+            <div className="jumia-flex jumia-flex-col jumia-gap-2">
               {product.categories?.[0] && (
-                <span className="text-xs text-gray-500">{product.categories[0].name}</span>
+                <span className="jumia-text-xs jumia-text-gray">{product.categories[0].name}</span>
               )}
-              <h3 className="text-xl font-bold">{product.title}</h3>
+              <h3 className="jumia-text-xl jumia-font-bold">{product.title}</h3>
               {selectedOption && (
-                <p className="text-lg font-medium">
+                <p className="jumia-text-lg jumia-font-medium">
                   {convertToLocale({
                     amount: selectedOption.calculated_price?.calculated_amount || 0,
                     currencyCode: cart.currency_code,
@@ -104,15 +104,15 @@ export const ExpressProduct = ({ cart, countryCode, isActive }: ExpressProductPr
           </div>
 
           {product.description && (
-            <p className="text-sm text-gray-600">{product.description}</p>
+            <p className="jumia-text-sm jumia-text-gray-600">{product.description}</p>
           )}
 
           {product.options?.length > 0 && (
-            <div className="space-y-4">
+            <div className="jumia-space-y-4">
               {product.options.map((option) => (
                 <div key={option.id}>
-                  <span className="text-sm font-medium">{option.title}</span>
-                  <div className="mt-2 flex flex-wrap gap-2">
+                  <span className="jumia-text-sm jumia-font-medium">{option.title}</span>
+                  <div className="jumia-mt-2 jumia-flex jumia-flex-wrap jumia-gap-2">
                     {option.values?.map((value) => {
                       const variant = product.variants?.find((v) =>
                         v.options?.some((o) => o.option_id === option.id && o.value === value.value)
@@ -123,10 +123,10 @@ export const ExpressProduct = ({ cart, countryCode, isActive }: ExpressProductPr
                         <button
                           key={value.id}
                           onClick={() => variant && handleVariantChange(variant.id)}
-                          className={`px-4 py-2 rounded-md text-sm border transition-colors ${
+                          className={`jumia-px-4 jumia-py-2 jumia-rounded jumia-text-sm jumia-border jumia-transition-colors ${
                             isSelected
-                              ? "border-black bg-black text-white"
-                              : "border-gray-300 hover:border-gray-500"
+                              ? "jumia-border-black jumia-bg-black jumia-text-white"
+                              : "jumia-border-gray-300 jumia-hover:border-gray-500"
                           }`}
                         >
                           {value.value}
@@ -139,25 +139,25 @@ export const ExpressProduct = ({ cart, countryCode, isActive }: ExpressProductPr
             </div>
           )}
 
-          <div className="flex items-center gap-4">
-            <label className="text-sm font-medium">Quantity</label>
+          <div className="jumia-flex jumia-items-center jumia-gap-4">
+            <label className="jumia-text-sm jumia-font-medium">Quantity</label>
             <input
               type="number"
               min="1"
               max={selectedOption?.inventory_quantity || 99}
               value={quantity}
               onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-              className="w-20 px-3 py-2 border border-gray-300 rounded-md text-center"
+              className="jumia-w-20 jumia-px-3 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-text-center"
             />
           </div>
 
           <button
             onClick={handleAddToCart}
             disabled={!selectedVariant || !isInStock || isLoading}
-            className={`w-full py-3 px-6 rounded-md text-white font-medium transition-colors ${
+            className={`jumia-w-full jumia-py-3 jumia-px-6 jumia-rounded jumia-text-white jumia-font-medium jumia-transition-colors ${
               !selectedVariant || !isInStock
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-black hover:bg-gray-800"
+                ? "jumia-bg-gray-400 jumia-cursor-not-allowed"
+                : "jumia-bg-black jumia-hover:bg-gray-800"
             }`}
           >
             {isLoading

@@ -13,48 +13,48 @@ const { countryCode } = Astro.params;
   description="E-commerce starter template built with Astro and Medusa for maximum performance. Browse our collection of products."
   image={heroImage.src}
 >
-  <section
-    class="flex items-center gap-12 overflow-hidden px-8 py-10 md:px-12 lg:min-h-[calc(100vh-96px-2rem)] lg:px-16"
-  >
-    <div class="flex flex-col gap-6 w-full md:flex-1 md:max-w-2xl">
-      <h1 class="text-5xl font-bold leading-tight tracking-tight">
-        Astro + Medusa <span class="whitespace-nowrap">e-commerce</span> starter template
-      </h1>
-      <p class="text-gray-500 text-base leading-relaxed">
-        This template is a good way to start building your e-commerce store with
-        maximum performance in mind.
-      </p>
-      <div class="flex items-center gap-4 mt-2">
-        <a
-          href="https://github.com/Bystrol/astro-medusa-starter"
-          target="_blank"
-          class="px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors"
-        >
-          Open Github
-        </a>
-        <a
-          href={`/${countryCode}/store`}
-          class="px-6 py-3 border border-black text-black text-sm font-medium rounded-full hover:bg-gray-100 transition-colors"
-        >
-          Browse products
-        </a>
-      </div>
-    </div>
+  <section class="jumia-hero">
+    <div class="jumia-container jumia-max-w-7xl jumia-px-4 jumia-mx-auto">
+      <div class="jumia-grid jumia-grid-2 jumia-gap-12 jumia-items-center">
+        <div class="jumia-hero-content">
+          <h1 class="jumia-hero-title">
+            Astro + Medusa <span class="jumia-text-orange">e-commerce</span> starter template
+          </h1>
+          <p class="jumia-hero-subtitle">
+            This template is a good way to start building your e-commerce store with
+            maximum performance in mind.
+          </p>
+          <div class="jumia-flex jumia-gap-4 jumia-mt-6">
+            <a
+              href="https://github.com/Bystrol/astro-medusa-starter"
+              target="_blank"
+              class="jumia-hero-btn jumia-hero-btn-white"
+            >
+              Open Github
+            </a>
+            <a
+              href={`/${countryCode}/store`}
+              class="jumia-hero-btn jumia-hero-btn-orange"
+            >
+              Browse products
+            </a>
+          </div>
+        </div>
 
-    <div
-      class="relative hidden h-full min-h-[36rem] md:flex md:flex-1 md:items-center md:justify-end"
-    >
-      <Image
-        src={heroImage}
-        width={800}
-        height={900}
-        alt="Featured product"
-        widths={[400, 600, 800]}
-        sizes="(max-width: 1024px) 50vw, 40vw"
-        format="webp"
-        quality={80}
-        class="pointer-events-none absolute right-[-58%] top-1/2 z-10 h-auto max-h-none w-[66rem] max-w-none -translate-y-1/2 object-contain lg:right-[-64%] lg:w-[82rem] xl:right-[-62%] xl:w-[98rem]"
-      />
+        <div class="jumia-relative jumia-hidden jumia-h-full jumia-min-h-[36rem] jumia-md:flex jumia-flex-1 jumia-items-center jumia-justify-end">
+          <Image
+            src={heroImage}
+            width={800}
+            height={900}
+            alt="Featured product"
+            widths={[400, 600, 800]}
+            sizes="(max-width: 1024px) 50vw, 40vw"
+            format="webp"
+            quality={80}
+            class="jumia-pointer-events-none jumia-absolute jumia-right-[-58%] jumia-top-1/2 jumia-z-10 jumia-h-auto jumia-max-h-none jumia-w-[66rem] jumia-max-w-none jumia--translate-y-1/2 jumia-object-contain jumia-lg:right-[-64%] jumia-lg:w-[82rem] jumia-xl:right-[-62%] jumia-xl:w-[98rem]"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

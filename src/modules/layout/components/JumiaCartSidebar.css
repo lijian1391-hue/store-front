@@ -1,0 +1,192 @@
+.jumia-cart-sidebar-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.jumia-cart-sidebar {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.jumia-cart-sidebar-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1.5rem;
+}
+
+.jumia-cart-sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.jumia-cart-sidebar-close {
+  color: #757575;
+}
+
+.jumia-cart-sidebar-close:hover {
+  color: #333333;
+}
+
+.jumia-cart-sidebar-content {
+  padding: 1.5rem;
+}
+
+.jumia-cart-sidebar-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.jumia-cart-sidebar-empty-text {
+  color: #757575;
+  margin-bottom: 1rem;
+}
+
+.jumia-cart-sidebar-empty-link {
+  color: #f57c00;
+  text-decoration: none;
+}
+
+.jumia-cart-sidebar-empty-link:hover {
+  text-decoration: underline;
+}
+
+.jumia-cart-sidebar-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.jumia-cart-sidebar-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.jumia-cart-sidebar-item-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.jumia-cart-sidebar-item-info {
+  flex: 1;
+}
+
+.jumia-cart-sidebar-item-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 0.25rem;
+}
+
+.jumia-cart-sidebar-item-variant {
+  font-size: 0.75rem;
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.jumia-cart-sidebar-item-quantity {
+  font-size: 0.75rem;
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.jumia-cart-sidebar-item-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.jumia-cart-sidebar-item-remove {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #f44336;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.jumia-cart-sidebar-item-remove:hover {
+  color: #d32f2f;
+}
+
+.jumia-cart-sidebar-footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem;
+}
+
+.jumia-cart-sidebar-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.jumia-cart-sidebar-subtotal-label {
+  color: #757575;
+}
+
+.jumia-cart-sidebar-subtotal-value {
+  font-weight: 600;
+  color: #000000;
+}
+
+.jumia-cart-sidebar-action {
+  display: block;
+  width: 100%;
+  background-color: #f57c00;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.jumia-cart-sidebar-action:hover {
+  background-color: #e65100;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(245, 124, 0, 0.3);
+}
+
+.jumia-cart-sidebar-item-variant {
+  font-size: 0.75rem;
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.jumia-cart-sidebar-item-quantity {
+  font-size: 0.75rem;
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.jumia-cart-sidebar-item-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.jumia-cart-sidebar-item-remove {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #f44336;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.jumia-cart-sidebar-item-remove:hover {
+  color: #d32f2f;
+}

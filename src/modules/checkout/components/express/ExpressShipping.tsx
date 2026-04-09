@@ -62,36 +62,36 @@ export const ExpressShipping = ({ cart, isActive }: ExpressShippingProps) => {
       isDone={!!cart.shipping_methods?.length}
       path={`/${cart.items?.[0]?.variant?.product?.region_id ? cart.items[0].variant.product.region_id : 'us'}/checkout?step=shipping`}
     >
-      <div className="space-y-4">
-        <p className="text-sm text-gray-600">Select a shipping method</p>
+      <div className="jumia-space-y-4">
+        <p className="jumia-text-sm jumia-text-gray-600">Select a shipping method</p>
 
-        {isLoading && <p className="text-sm text-gray-500">Loading shipping options...</p>}
+        {isLoading && <p className="jumia-text-sm jumia-text-gray">Loading shipping options...</p>}
 
         {!isLoading && shippingOptions.length === 0 && (
-          <p className="text-sm text-gray-500">No shipping options available</p>
+          <p className="jumia-text-sm jumia-text-gray">No shipping options available</p>
         )}
 
         {shippingOptions.map((option) => (
           <label
             key={option.id}
-            className={`flex items-center justify-between p-4 border rounded-md cursor-pointer transition-colors ${
+            className={`jumia-flex jumia-items-center jumia-justify-between jumia-p-4 jumia-border jumia-rounded jumia-cursor-pointer jumia-transition-colors ${
               selectedOption === option.id
-                ? "border-black bg-gray-50"
-                : "border-gray-300 hover:border-gray-400"
+                ? "jumia-border-black jumia-bg-gray-50"
+                : "jumia-border-gray-300 jumia-hover:border-gray-400"
             }`}
           >
-            <div className="flex items-center gap-3">
+            <div className="jumia-flex jumia-items-center jumia-gap-3">
               <input
                 type="radio"
                 name="shipping_option"
                 value={option.id}
                 checked={selectedOption === option.id}
                 onChange={() => handleSelectOption(option.id)}
-                className="w-4 h-4 accent-black"
+                className="jumia-w-4 jumia-h-4 jumia-accent-black"
               />
-              <span className="font-medium">{option.name}</span>
+              <span className="jumia-font-medium">{option.name}</span>
             </div>
-            <span className="font-medium">
+            <span className="jumia-font-medium">
               {option.amount === 0
                 ? "Free"
                 : convertToLocale({
@@ -105,7 +105,7 @@ export const ExpressShipping = ({ cart, isActive }: ExpressShippingProps) => {
         <button
           onClick={handleSubmit}
           disabled={!selectedOption || isSaving}
-          className="w-full py-3 px-6 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
+          className="jumia-w-full jumia-py-3 jumia-px-6 jumia-bg-black jumia-text-white jumia-rounded jumia-font-medium jumia-hover:bg-gray-800 jumia-transition-colors jumia-disabled:opacity-50"
         >
           {isSaving ? "Saving..." : "Continue to payment"}
         </button>

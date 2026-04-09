@@ -1,0 +1,169 @@
+.jumia-nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.jumia-nav-container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.jumia-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.jumia-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.jumia-nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.jumia-nav-link:hover {
+  color: #f57c00;
+}
+
+.jumia-nav-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #000000;
+  text-decoration: none;
+}
+
+.jumia-nav-logo span {
+  color: #f57c00;
+}
+
+.jumia-nav-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.jumia-nav-cart:hover {
+  color: #f57c00;
+}
+
+.jumia-nav-cart-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2;
+}
+
+.jumia-nav-cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #f57c00;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumia-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.jumia-nav-search {
+  position: relative;
+}
+
+.jumia-nav-search-input {
+  width: 200px;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.jumia-nav-search-input:focus {
+  outline: none;
+  border-color: #f57c00;
+  box-shadow: 0 0 0 2px rgba(245, 124, 0, 0.2);
+}
+
+.jumia-nav-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #757575;
+}
+
+.jumia-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.jumia-nav-user:hover {
+  color: #f57c00;
+}
+
+.jumia-nav-user-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2;
+}
+
+.jumia-nav-language {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.jumia-nav-language:hover {
+  color: #f57c00;
+}
+
+.jumia-nav-language-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2;
+}

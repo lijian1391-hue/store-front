@@ -96,95 +96,95 @@ export const ExpressAddress = ({ cart, countries, countryCode, isActive }: Expre
       isDone={!!cart.shipping_address?.first_name}
       path={`/${countryCode}/checkout?step=address`}
     >
-      <div className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="jumia-space-y-6">
+        <div className="jumia-grid jumia-grid-2 jumia-gap-4">
           <div>
-            <label className="block text-sm font-medium mb-1">First name</label>
+            <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">First name</label>
             <input
               type="text"
               value={formData.firstName}
               onChange={(e) => handleChange("firstName", e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+              className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Last name</label>
+            <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Last name</label>
             <input
               type="text"
               value={formData.lastName}
               onChange={(e) => handleChange("lastName", e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+              className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Email</label>
+          <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Email</label>
           <input
             type="email"
             value={formData.email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+            className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Phone</label>
+          <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Phone</label>
           <input
             type="tel"
             value={formData.phone}
             onChange={(e) => handleChange("phone", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+            className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Address</label>
+          <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Address</label>
           <input
             type="text"
             value={formData.address}
             onChange={(e) => handleChange("address", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+            className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Company</label>
+          <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Company</label>
           <input
             type="text"
             value={formData.company}
             onChange={(e) => handleChange("company", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+            className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="jumia-grid jumia-grid-2 jumia-gap-4">
           <div>
-            <label className="block text-sm font-medium mb-1">Postal code</label>
+            <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Postal code</label>
             <input
               type="text"
               value={formData.postalCode}
               onChange={(e) => handleChange("postalCode", e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+              className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">City</label>
+            <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">City</label>
             <input
               type="text"
               value={formData.city}
               onChange={(e) => handleChange("city", e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+              className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Country</label>
+          <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">Country</label>
           <select
             value={formData.country}
             onChange={(e) => handleChange("country", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black bg-white"
+            className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black jumia-bg-white"
           >
             <option value="">Select country</option>
             {countries.map((c) => (
@@ -196,21 +196,21 @@ export const ExpressAddress = ({ cart, countries, countryCode, isActive }: Expre
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">State / Province</label>
+          <label className="jumia-block jumia-text-sm jumia-font-medium jumia-mb-1">State / Province</label>
           <input
             type="text"
             value={formData.province}
             onChange={(e) => handleChange("province", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:border-black"
+            className="jumia-w-full jumia-px-4 jumia-py-2 jumia-border jumia-border-gray-300 jumia-rounded jumia-focus:border-black"
           />
         </div>
 
-        {error && <p className="text-red-500 text-sm">{error}</p>}
+        {error && <p className="jumia-text-red jumia-text-sm">{error}</p>}
 
         <button
           onClick={handleSubmit}
           disabled={isSaving}
-          className="w-full py-3 px-6 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
+          className="jumia-w-full jumia-py-3 jumia-px-6 jumia-bg-black jumia-text-white jumia-rounded jumia-font-medium jumia-hover:bg-gray-800 jumia-transition-colors jumia-disabled:opacity-50"
         >
           {isSaving ? "Saving..." : "Continue to shipping"}
         </button>

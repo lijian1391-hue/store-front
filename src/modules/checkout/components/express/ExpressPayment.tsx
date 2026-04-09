@@ -98,27 +98,27 @@ export const ExpressPayment = ({ cart, countryCode, isActive }: ExpressPaymentPr
       isDone={!!cart.payment_collection?.payment_sessions?.length}
       path={`/${countryCode}/checkout?step=payment`}
     >
-      <div className="space-y-6">
-        <div className="space-y-3">
+      <div className="jumia-space-y-6">
+        <div className="jumia-space-y-3">
           {paymentProviders.map((provider) => (
             <label
               key={provider.id}
-              className={`flex items-center justify-between p-4 border rounded-md cursor-pointer transition-colors ${
+              className={`jumia-flex jumia-items-center jumia-justify-between jumia-p-4 jumia-border jumia-rounded jumia-cursor-pointer jumia-transition-colors ${
                 selectedProvider === provider.id
-                  ? "border-black bg-gray-50"
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "jumia-border-black jumia-bg-gray-50"
+                  : "jumia-border-gray-300 jumia-hover:border-gray-400"
               }`}
             >
-              <div className="flex items-center gap-3">
+              <div className="jumia-flex jumia-items-center jumia-gap-3">
                 <input
                   type="radio"
                   name="payment_provider"
                   value={provider.id}
                   checked={selectedProvider === provider.id}
                   onChange={() => handleSelectProvider(provider.id)}
-                  className="w-4 h-4 accent-black"
+                  className="jumia-w-4 jumia-h-4 jumia-accent-black"
                 />
-                <span className="font-medium">
+                <span className="jumia-font-medium">
                   {provider.id === "pp_system_default"
                     ? "Cash on Delivery"
                     : provider.id.replace(/^pp_/, "").replace(/_/g, " ")}
@@ -129,42 +129,42 @@ export const ExpressPayment = ({ cart, countryCode, isActive }: ExpressPaymentPr
         </div>
 
         {isStripe && cart.payment_collection?.payment_sessions?.some((s) => s.provider_id === selectedProvider) && (
-          <div className="p-4 border border-gray-200 rounded-md">
+          <div className="jumia-p-4 jumia-border jumia-border-gray-200 jumia-rounded">
             <PaymentElement />
           </div>
         )}
 
-        {error && <p className="text-red-500 text-sm">{error}</p>}
+        {error && <p className="jumia-text-red jumia-text-sm">{error}</p>}
 
-        <div className="space-y-3 pt-4 border-t border-gray-200">
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-600">Subtotal</span>
-            <span className="font-medium">
+        <div className="jumia-space-y-3 jumia-pt-4 jumia-border-t jumia-border-gray-200">
+          <div className="jumia-flex jumia-justify-between jumia-text-sm">
+            <span className="jumia-text-gray-600">Subtotal</span>
+            <span className="jumia-font-medium">
               {convertToLocale({
                 amount: cart.item_subtotal || 0,
                 currencyCode: cart.currency_code,
               })}
             </span>
           </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-600">Shipping</span>
-            <span className="font-medium">
+          <div className="jumia-flex jumia-justify-between jumia-text-sm">
+            <span className="jumia-text-gray-600">Shipping</span>
+            <span className="jumia-font-medium">
               {convertToLocale({
                 amount: cart.shipping_total || 0,
                 currencyCode: cart.currency_code,
               })}
             </span>
           </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-600">Taxes</span>
-            <span className="font-medium">
+          <div className="jumia-flex jumia-justify-between jumia-text-sm">
+            <span className="jumia-text-gray-600">Taxes</span>
+            <span className="jumia-font-medium">
               {convertToLocale({
                 amount: cart.tax_total || 0,
                 currencyCode: cart.currency_code,
               })}
             </span>
           </div>
-          <div className="flex justify-between text-lg font-bold pt-2 border-t border-gray-200">
+          <div className="jumia-flex jumia-justify-between jumia-text-lg jumia-font-bold jumia-pt-2 jumia-border-t jumia-border-gray-200">
             <span>Total</span>
             <span>
               {convertToLocale({
@@ -178,7 +178,7 @@ export const ExpressPayment = ({ cart, countryCode, isActive }: ExpressPaymentPr
         <button
           onClick={handlePlaceOrder}
           disabled={!selectedProvider || isSaving || isPlacing}
-          className="w-full py-3 px-6 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
+          className="jumia-w-full jumia-py-3 jumia-px-6 jumia-bg-black jumia-text-white jumia-rounded jumia-font-medium jumia-hover:bg-gray-800 jumia-transition-colors jumia-disabled:opacity-50"
         >
           {isPlacing ? "Placing order..." : `Pay ${convertToLocale({
             amount: cart.total || 0,

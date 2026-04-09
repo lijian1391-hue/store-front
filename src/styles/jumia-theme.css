@@ -1,0 +1,1141 @@
+/* Jumia Brand Colors */
+:root {
+  --jumia-orange: #f57c00;
+  --jumia-orange-dark: #e65100;
+  --jumia-orange-light: #ffcc80;
+  --jumia-black: #000000;
+  --jumia-gray: #757575;
+  --jumia-gray-light: #e0e0e0;
+  --jumia-white: #ffffff;
+  --jumia-success: #4caf50;
+  --jumia-error: #f44336;
+}
+
+/* Jumia Typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Jumia Components */
+.jumia-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.jumia-btn-primary {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+  border: none;
+}
+
+.jumia-btn-primary:hover {
+  background-color: var(--jumia-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jumia-btn-secondary {
+  background-color: var(--jumia-black);
+  color: var(--jumia-white);
+  border: none;
+}
+
+.jumia-btn-secondary:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jumia-btn-outline {
+  background-color: transparent;
+  color: var(--jumia-black);
+  border: 2px solid var(--jumia-black);
+}
+
+.jumia-btn-outline:hover {
+  background-color: var(--jumia-gray-light);
+}
+
+.jumia-card {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.jumia-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.jumia-product-card {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.jumia-product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.jumia-product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.jumia-product-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--jumia-black);
+  margin: 0.5rem 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.jumia-product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+}
+
+.jumia-product-price-old {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--jumia-gray);
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.jumia-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.jumia-badge-orange {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+.jumia-badge-green {
+  background-color: var(--jumia-success);
+  color: var(--jumia-white);
+}
+
+.jumia-badge-red {
+  background-color: var(--jumia-error);
+  color: var(--jumia-white);
+}
+
+.jumia-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--jumia-gray-light);
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.jumia-input:focus {
+  outline: none;
+  border-color: var(--jumia-orange);
+  box-shadow: 0 0 0 2px rgba(245, 124, 0, 0.2);
+}
+
+.jumia-section {
+  padding: 2rem 0;
+}
+
+.jumia-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--jumia-orange);
+}
+
+.jumia-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.jumia-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.jumia-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.jumia-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .jumia-grid-2,
+  .jumia-grid-3,
+  .jumia-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .jumia-grid-2,
+  .jumia-grid-3,
+  .jumia-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jumia-header {
+  background-color: var(--jumia-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.jumia-header-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  text-decoration: none;
+}
+
+.jumia-header-logo span {
+  color: var(--jumia-orange);
+}
+
+.jumia-cart-icon {
+  position: relative;
+}
+
+.jumia-cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumia-footer {
+  background-color: var(--jumia-black);
+  color: var(--jumia-white);
+  padding: 3rem 0 1rem;
+}
+
+.jumia-footer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.jumia-footer-link {
+  color: var(--jumia-gray-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.jumia-footer-link:hover {
+  color: var(--jumia-orange);
+}
+
+.jumia-footer-brand {
+  font-size: 0.875rem;
+  color: var(--jumia-gray-light);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.jumia-hero {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.jumia-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.jumia-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.jumia-hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--jumia-gray);
+  margin-bottom: 2rem;
+}
+
+.jumia-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.jumia-hero-btn-orange {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+.jumia-hero-btn-orange:hover {
+  background-color: var(--jumia-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(245, 124, 0, 0.3);
+}
+
+.jumia-hero-btn-white {
+  background-color: var(--jumia-white);
+  color: var(--jumia-black);
+}
+
+.jumia-hero-btn-white:hover {
+  background-color: var(--jumia-gray-light);
+  transform: translateY(-2px);
+}
+
+.jumia-category-card {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.jumia-category-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.jumia-category-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.jumia-category-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--jumia-black);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.jumia-sale-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.jumia-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.jumia-rating-star {
+  color: #ffc107;
+  font-size: 0.875rem;
+}
+
+.jumia-rating-count {
+  font-size: 0.75rem;
+  color: var(--jumia-gray);
+  margin-left: 0.25rem;
+}
+
+.jumia-search-bar {
+  position: relative;
+}
+
+.jumia-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--jumia-gray-light);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.jumia-search-input:focus {
+  outline: none;
+  border-color: var(--jumia-orange);
+  box-shadow: 0 0 0 2px rgba(245, 124, 0, 0.2);
+}
+
+.jumia-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--jumia-gray);
+}
+
+.jumia-filter-bar {
+  background-color: var(--jumia-gray-light);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.jumia-filter-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--jumia-white);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--jumia-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.jumia-filter-item:hover {
+  background-color: var(--jumia-gray-light);
+}
+
+.jumia-filter-item.active {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+.jumia-cart-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  border: 1px solid var(--jumia-gray-light);
+}
+
+.jumia-cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.jumia-cart-item-info {
+  flex: 1;
+}
+
+.jumia-cart-item-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--jumia-black);
+  margin-bottom: 0.25rem;
+}
+
+.jumia-cart-item-variant {
+  font-size: 0.75rem;
+  color: var(--jumia-gray);
+  margin-bottom: 0.5rem;
+}
+
+.jumia-cart-item-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--jumia-black);
+}
+
+.jumia-cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.jumia-cart-quantity-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--jumia-gray-light);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jumia-cart-quantity-btn:hover {
+  background-color: var(--jumia-gray);
+  color: var(--jumia-white);
+}
+
+.jumia-cart-quantity-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid var(--jumia-gray-light);
+  border-radius: 4px;
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.jumia-checkout-card {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.jumia-checkout-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--jumia-gray-light);
+}
+
+.jumia-checkout-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.jumia-checkout-card-done {
+  color: var(--jumia-success);
+  font-size: 1.5rem;
+}
+
+.jumia-checkout-card-edit {
+  color: var(--jumia-orange);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.jumia-checkout-card-edit:hover {
+  color: var(--jumia-orange-dark);
+}
+
+.jumia-checkout-card-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.jumia-checkout-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--jumia-gray-light);
+  border-radius: 8px;
+}
+
+.jumia-checkout-step.active {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+.jumia-checkout-step.completed {
+  background-color: var(--jumia-success);
+  color: var(--jumia-white);
+}
+
+.jumia-checkout-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background-color: var(--jumia-white);
+  color: var(--jumia-gray);
+}
+
+.jumia-checkout-step.active .jumia-checkout-step-number {
+  background-color: var(--jumia-white);
+  color: var(--jumia-orange);
+}
+
+.jumia-checkout-step.completed .jumia-checkout-step-number {
+  background-color: var(--jumia-white);
+  color: var(--jumia-success);
+}
+
+.jumia-checkout-step-info {
+  flex: 1;
+}
+
+.jumia-checkout-step-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.jumia-checkout-step-subtitle {
+  font-size: 0.875rem;
+  color: var(--jumia-gray);
+}
+
+.jumia-checkout-step.active .jumia-checkout-step-subtitle {
+  color: var(--jumia-white);
+}
+
+.jumia-checkout-step.completed .jumia-checkout-step-subtitle {
+  color: var(--jumia-white);
+}
+
+.jumia-checkout-summary {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+}
+
+.jumia-checkout-summary-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--jumia-gray-light);
+}
+
+.jumia-checkout-summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--jumia-gray-light);
+}
+
+.jumia-checkout-summary-item:last-child {
+  border-bottom: none;
+}
+
+.jumia-checkout-summary-item-label {
+  font-size: 0.9rem;
+  color: var(--jumia-gray);
+}
+
+.jumia-checkout-summary-item-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--jumia-black);
+}
+
+.jumia-checkout-summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  border-top: 2px solid var(--jumia-black);
+  margin-top: 1rem;
+}
+
+.jumia-checkout-action {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.jumia-checkout-action-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.jumia-checkout-action-btn-primary {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+.jumia-checkout-action-btn-primary:hover {
+  background-color: var(--jumia-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(245, 124, 0, 0.3);
+}
+
+.jumia-checkout-action-btn-secondary {
+  background-color: var(--jumia-black);
+  color: var(--jumia-white);
+}
+
+.jumia-checkout-action-btn-secondary:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.jumia-toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+}
+
+.jumia-toast-success {
+  background-color: var(--jumia-success);
+  color: var(--jumia-white);
+}
+
+.jumia-toast-error {
+  background-color: var(--jumia-error);
+  color: var(--jumia-white);
+}
+
+.jumia-toast-info {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.jumia-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--jumia-white);
+  animation: spin 1s ease-in-out infinite;
+}
+
+.jumia-spinner-orange {
+  border-color: rgba(245, 124, 0, 0.3);
+  border-top-color: var(--jumia-orange);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.jumia-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--jumia-gray-light);
+}
+
+.jumia-tab {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--jumia-gray);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.jumia-tab:hover {
+  color: var(--jumia-black);
+}
+
+.jumia-tab.active {
+  color: var(--jumia-orange);
+  border-bottom-color: var(--jumia-orange);
+}
+
+.jumia-tab-content {
+  display: none;
+}
+
+.jumia-tab-content.active {
+  display: block;
+}
+
+.jumia-accordion {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.jumia-accordion-header {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.jumia-accordion-header:hover {
+  background-color: var(--jumia-gray-light);
+}
+
+.jumia-accordion-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--jumia-black);
+}
+
+.jumia-accordion-icon {
+  font-size: 1.25rem;
+  color: var(--jumia-gray);
+  transition: transform 0.3s ease;
+}
+
+.jumia-accordion-content {
+  padding: 1rem 1.5rem;
+  color: var(--jumia-gray);
+  line-height: 1.6;
+}
+
+.jumia-accordion.active .jumia-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.jumia-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--jumia-gray);
+  margin-bottom: 1rem;
+}
+
+.jumia-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.jumia-breadcrumb-item a {
+  color: var(--jumia-gray);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.jumia-breadcrumb-item a:hover {
+  color: var(--jumia-orange);
+}
+
+.jumia-breadcrumb-separator {
+  color: var(--jumia-gray-light);
+}
+
+.jumia-breadcrumb-item.active {
+  color: var(--jumia-black);
+  font-weight: 500;
+}
+
+.jumia-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.jumia-empty-state-icon {
+  font-size: 4rem;
+  color: var(--jumia-gray-light);
+  margin-bottom: 1rem;
+}
+
+.jumia-empty-state-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+  margin-bottom: 0.5rem;
+}
+
+.jumia-empty-state-subtitle {
+  font-size: 1rem;
+  color: var(--jumia-gray);
+  margin-bottom: 1.5rem;
+}
+
+.jumia-empty-state-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.jumia-empty-state-btn-primary {
+  background-color: var(--jumia-orange);
+  color: var(--jumia-white);
+}
+
+.jumia-empty-state-btn-primary:hover {
+  background-color: var(--jumia-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(245, 124, 0, 0.3);
+}
+
+.jumia-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--jumia-black);
+  margin-bottom: 0.5rem;
+}
+
+.jumia-input-group {
+  position: relative;
+}
+
+.jumia-input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--jumia-gray);
+}
+
+.jumia-input-field {
+  padding-left: 2.5rem;
+}
+
+.jumia-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23757575' d='M6 8.825L1.175 4 2.238 2.938 6 6.7 9.763 2.938 10.825 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+.jumia-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.jumia-checkbox-input {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--jumia-gray);
+  border-radius: 2px;
+  accent-color: var(--jumia-orange);
+  cursor: pointer;
+}
+
+.jumia-checkbox-label {
+  font-size: 0.875rem;
+  color: var(--jumia-black);
+  cursor: pointer;
+}
+
+.jumia-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.jumia-radio-input {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--jumia-gray);
+  border-radius: 50%;
+  accent-color: var(--jumia-orange);
+  accent-color: var(--jumia-orange);
+  cursor: pointer;
+}
+
+.jumia-radio-label {
+  font-size: 0.875rem;
+  color: var(--jumia-black);
+  cursor: pointer;
+}
+
+.jumia-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: var(--jumia-gray-light);
+  color: var(--jumia-black);
+}
+
+.jumia-tag-orange {
+  background-color: rgba(245, 124, 0, 0.1);
+  color: var(--jumia-orange);
+}
+
+.jumia-tag-green {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--jumia-success);
+}
+
+.jumia-tag-red {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--jumia-error);
+}
+
+.jumia-alert {
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.jumia-alert-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-left: 4px solid var(--jumia-success);
+  color: var(--jumia-success);
+}
+
+.jumia-alert-error {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-left: 4px solid var(--jumia-error);
+  color: var(--jumia-error);
+}
+
+.jumia-alert-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid #ffc107;
+  color: #ffc107;
+}
+
+.jumia-alert-info {
+  background-color: rgba(33, 150, 243, 0.1);
+  border-left: 4px solid #2196f3;
+  color: #2196f3;
+}
+
+.jumia-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.jumia-modal {
+  background-color: var(--jumia-white);
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.jumia-modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--jumia-gray-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jumia-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--jumia-black);
+}
+
+.jumia-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--jumia-gray);
+  line-height: 1;
+}
+
+.jumia-modal-body {
+  padding: 1.5rem;
+}
+
+.jumia-modal-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--jumia-gray-light);
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.jumia-place-content-even {
+  place-content: even;
+}

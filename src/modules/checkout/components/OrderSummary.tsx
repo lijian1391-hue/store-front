@@ -9,12 +9,12 @@ export const OrderSummary = ({ cart }: OrderSummaryProps) => {
   const currencyCode = cart.currency_code || "USD";
 
   return (
-    <div className="sticky top-8">
-      <h2 className="text-2xl font-bold mb-6">In your Cart</h2>
+    <div className="jumia-sticky jumia-top-8">
+      <h2 className="jumia-text-2xl jumia-font-bold jumia-mb-6">In your Cart</h2>
 
-      <div className="space-y-3 mb-6">
-        <div className="flex justify-between text-sm">
-          <span className="text-gray-600">
+      <div className="jumia-space-y-3 jumia-mb-6">
+        <div className="jumia-flex jumia-justify-between jumia-text-sm">
+          <span className="jumia-text-gray-600">
             Subtotal (excl. shipping and taxes)
           </span>
           <span>
@@ -22,8 +22,8 @@ export const OrderSummary = ({ cart }: OrderSummaryProps) => {
           </span>
         </div>
 
-        <div className="flex justify-between text-sm">
-          <span className="text-gray-600">Shipping</span>
+        <div className="jumia-flex jumia-justify-between jumia-text-sm">
+          <span className="jumia-text-gray-600">Shipping</span>
           <span>
             {convertToLocale({
               amount: cart.shipping_total || 0,
@@ -32,14 +32,14 @@ export const OrderSummary = ({ cart }: OrderSummaryProps) => {
           </span>
         </div>
 
-        <div className="flex justify-between text-sm">
-          <span className="text-gray-600">Taxes</span>
+        <div className="jumia-flex jumia-justify-between jumia-text-sm">
+          <span className="jumia-text-gray-600">Taxes</span>
           <span>
             {convertToLocale({ amount: cart.tax_total || 0, currencyCode })}
           </span>
         </div>
 
-        <div className="pt-4 border-t border-gray-200 flex justify-between font-bold text-base">
+        <div className="jumia-pt-4 jumia-border-t jumia-border-gray-200 jumia-flex jumia-justify-between jumia-font-bold jumia-text-base">
           <span>Total</span>
           <span>
             {convertToLocale({ amount: cart.total || 0, currencyCode })}
@@ -47,7 +47,7 @@ export const OrderSummary = ({ cart }: OrderSummaryProps) => {
         </div>
       </div>
 
-      <div className="border-t border-gray-200 pt-4 space-y-4">
+      <div className="jumia-border-t jumia-border-gray-200 jumia-pt-4 jumia-space-y-4">
         {cart.items?.map((item) => {
           const thumbnailUrl =
             item.variant?.product?.thumbnail ||
@@ -59,31 +59,31 @@ export const OrderSummary = ({ cart }: OrderSummaryProps) => {
           const lineTotal = unitPrice * quantity;
 
           return (
-            <div key={item.id} className="flex gap-3">
+            <div key={item.id} className="jumia-flex jumia-gap-3">
               {thumbnailUrl ? (
                 <img
                   src={thumbnailUrl}
                   alt={productTitle}
-                  className="w-14 h-14 object-cover rounded border border-gray-200 flex-shrink-0"
+                  className="jumia-w-14 jumia-h-14 jumia-object-cover jumia-rounded jumia-border jumia-border-gray-200 jumia-flex-shrink-0"
                   loading="lazy"
                 />
               ) : (
-                <div className="w-14 h-14 bg-gray-100 rounded border border-gray-200 flex-shrink-0" />
+                <div className="jumia-w-14 jumia-h-14 jumia-bg-gray-100 jumia-rounded jumia-border jumia-border-gray-200 jumia-flex-shrink-0" />
               )}
 
-              <div className="flex-1 min-w-0">
-                <p className="font-medium text-sm truncate">{productTitle}</p>
+              <div className="jumia-flex-1 jumia-min-w-0">
+                <p className="jumia-font-medium jumia-text-sm jumia-truncate">{productTitle}</p>
                 {variantTitle && (
-                  <p className="text-xs text-gray-500">
+                  <p className="jumia-text-xs jumia-text-gray-500">
                     Variant: {variantTitle}
                   </p>
                 )}
-                <div className="flex justify-between mt-1 text-sm">
-                  <span className="text-gray-500">
+                <div className="jumia-flex jumia-justify-between jumia-mt-1 jumia-text-sm">
+                  <span className="jumia-text-gray-500">
                     {quantity}x{" "}
                     {convertToLocale({ amount: unitPrice, currencyCode })}
                   </span>
-                  <span className="font-medium">
+                  <span className="jumia-font-medium">
                     {convertToLocale({ amount: lineTotal, currencyCode })}
                   </span>
                 </div>

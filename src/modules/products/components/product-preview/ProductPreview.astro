@@ -23,20 +23,33 @@ const { cheapestPrice } = getProductPrice({
 
 <a
   href={`/${countryCode}/store/${id}`}
-  class="flex h-full flex-col gap-4 justify-between group"
+  class="jumia-product-card jumia-flex jumia-flex-col jumia-h-full jumia-gap-4 jumia-justify-between jumia-group"
 >
-  <Thumbnail imageUrl={thumbnailUrl || imageUrl} title={title} priority={priority} />
+  <div class="jumia-relative">
+    <Thumbnail imageUrl={thumbnailUrl || imageUrl} title={title} priority={priority} />
+    {cheapestPrice && cheapestPrice.original_price && cheapestPrice.calculated_price && (
+      <span class="jumia-badge jumia-badge-orange jumia-sale-badge">
+        Sale
+      </span>
+    )}
+  </div>
 
-  <div class="flex text-sm justify-between">
-    <p>{title}</p>
-    {
-      cheapestPrice && (
+  <div class="jumia-p-4">
+    <h3 class="jumia-product-title jumia-truncate-2">{title}</h3>
+    
+    {cheapestPrice && (
+      <div class="jumia-flex jumia-items-center jumia-gap-2 jumia-mt-2">
         <Price
           priceType={cheapestPrice.price_type ?? ""}
           originalPrice={cheapestPrice.original_price}
           calculatedPrice={cheapestPrice.calculated_price}
         />
-      )
-    }
+      </div>
+    )}
+    
+    <div class="jumia-flex jumia-items-center jumia-gap-2 jumia-mt-3">
+      <span class="jumia-text-xs jumia-text-gray">★★★★★</span>
+      <span class="jumia-text-xs jumia-text-gray/60">(128)</span>
+    </div>
   </div>
 </a>

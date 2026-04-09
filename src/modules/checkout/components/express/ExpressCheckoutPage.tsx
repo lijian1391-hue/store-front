@@ -59,12 +59,12 @@ export const ExpressCheckoutPage = ({ countryCode, countries }: ExpressCheckoutP
 
   if (!cart || !cart.items?.length) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-3xl font-bold mb-4">Your cart is empty</h1>
-        <p className="text-gray-600 mb-6">Add items before checking out.</p>
+      <div className="jumia-max-w-7xl jumia-mx-auto jumia-px-4 jumia-py-16 jumia-text-center">
+        <h1 className="jumia-text-3xl jumia-font-bold jumia-mb-4">Your cart is empty</h1>
+        <p className="jumia-text-gray-600 jumia-mb-6">Add items before checking out.</p>
         <a
           href={`/${countryCode}/store`}
-          className="inline-block bg-black text-white py-3 px-8 rounded-md hover:bg-gray-800 transition-colors"
+          className="jumia-inline-block jumia-bg-black jumia-text-white jumia-py-3 jumia-px-8 jumia-rounded jumia-hover:bg-gray-800 jumia-transition-colors"
         >
           Continue Shopping
         </a>
@@ -78,15 +78,15 @@ export const ExpressCheckoutPage = ({ countryCode, countries }: ExpressCheckoutP
   const stripeClientSecret = stripeSession?.data?.client_secret as string | undefined;
 
   const checkoutContent = (
-    <div className="max-w-7xl mx-auto px-8 py-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div className="lg:col-span-2 space-y-8">
+    <div className="jumia-max-w-7xl jumia-mx-auto jumia-px-8 jumia-py-8">
+      <div className="jumia-grid jumia-grid-1 jumia-lg:grid-cols-3 jumia-gap-12">
+        <div className="jumia-lg:col-span-2 jumia-space-y-8">
           <ExpressProduct cart={cart} countryCode={countryCode} isActive={currentStep === "product"} />
           <ExpressAddress cart={cart} countries={countries} countryCode={countryCode} isActive={currentStep === "address"} />
           <ExpressShipping cart={cart} isActive={currentStep === "shipping"} />
           <ExpressPayment cart={cart} countryCode={countryCode} isActive={currentStep === "payment"} />
         </div>
-        <div className="lg:col-span-1">
+        <div className="jumia-lg:col-span-1">
           <OrderSummary cart={cart} />
         </div>
       </div>

@@ -7,6 +7,7 @@ import {
 import { convertToLocale } from "@lib/utils/money";
 import { useStore } from "@nanostores/react";
 import { useEffect, useRef } from "react";
+import "./JumiaCartSidebar.css";
 
 interface CartSidebarProps {
   countryCode: string;
